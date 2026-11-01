@@ -1,0 +1,9 @@
+MusicBox.xcodeproj/
+MusicBox/Info.plist
+build/
+build.log
+Payload/
+*.ipa
+.DS_Store
+xcuserdata/
+DerivedData/

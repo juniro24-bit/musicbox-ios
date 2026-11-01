@@ -1,0 +1,42 @@
+name: MusicBox
+options:
+  bundleIdPrefix: com.mbxplayer
+  deploymentTarget:
+    iOS: "16.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+packages:
+  YouTubeKit:
+    url: https://github.com/alexeichhorn/YouTubeKit
+    from: 0.4.0
+targets:
+  MusicBox:
+    type: application
+    platform: iOS
+    sources:
+      - path: MusicBox
+    dependencies:
+      - package: YouTubeKit
+    info:
+      path: MusicBox/Info.plist
+      properties:
+        CFBundleDisplayName: 뮤직박스
+        UILaunchScreen: {}
+        UIBackgroundModes:
+          - audio
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mbxplayer.musicbox
+        PRODUCT_NAME: MusicBox
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
